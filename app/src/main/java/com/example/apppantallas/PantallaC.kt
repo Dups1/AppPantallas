@@ -22,9 +22,8 @@ fun PantallaC (navController: NavController){
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(text ="Hay ta mi tarea", fontSize = 40.sp)
-            Button(onClick = { navController.navigate("lista") },) {
+            Button(onClick = { navController.navigate("lista"){popUpTo("lista"){inclusive = true} } },) {
                 Text("Regresar a la pantalla A")
-
             }
         }
     }
